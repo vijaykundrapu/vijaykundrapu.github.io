@@ -1,92 +1,171 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vijay Kumar Kundrapu | Full Stack QA Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>Vijay Kundrapu | Full Stack QA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0f111a;
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --text-color: #f0f0f0;
+      --accent-color: #00ffff;
+    }
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+    header, section, footer {
+      padding: 2rem;
+    }
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: 0 0 1rem rgba(0, 255, 255, 0.2);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 5rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--accent-color);
+    }
+    .hero p { margin: 1rem 0; font-size: 1.2rem; }
+    .cta-button {
+      background: var(--accent-color);
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
+      transition: 0.3s ease-in-out;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--accent-color);
+    }
+    .skills span, .experience div, .projects .card, .blogs .card, .resume ul li, .contact form, .footer {
+      margin-top: 1rem;
+    }
+    .projects, .blogs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      border-radius: 1rem;
+      transition: 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px var(--accent-color);
+    }
+    .contact form input, .contact form textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: none;
+    }
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--glass-border);
+      padding: 1rem 2rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Vijay Kumar Kundrapu</h1>
-      <p>Full Stack QA Engineer | Automation Architect | SDET</p>
-      <button id="darkModeToggle">Toggle Dark Mode</button>
-    </div>
-  </header>
+  <section class="hero">
+    <h1>Vijay Kundrapu</h1>
+    <p>Full Stack QA | 10+ Years of Experience</p>
+    <button class="cta-button" onclick="location.href='#projects'">View My Work</button>
+  </section>
 
-  <nav class="navbar">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
-    <a href="VijayKundrapu_Resume_FullStackQA_10Y.pdf" target="_blank" download>Download Resume</a>
-  </nav>
-
-  <section id="about" class="container">
+  <section class="glass">
     <h2>About Me</h2>
-    <p>I’m a passionate Full Stack QA Engineer with 10+ years of experience in automation testing, performance engineering, and mobile testing. I lead teams, build frameworks from scratch, and ensure delivery of robust, scalable, and high-quality software products.</p>
+    <p>Full Stack QA Engineer with 10+ years of experience in automation, mobile, performance, security, and functional testing. Expert in building robust test frameworks using Selenium, Appium, TestNG, and Java. Strong domain knowledge in HR, Healthcare, Hospitality, and Aqua Culture.</p>
+    <div class="skills">
+      <h3>Skills</h3>
+      <span>Core Java, Selenium, Appium, Playwright, Katalon</span><br />
+      <span>API: RestAssured, JMeter</span><br />
+      <span>Tools: Jenkins, TestNG, GIT, Jira, TestRail</span>
+    </div>
+    <div class="experience">
+      <h3>Experience</h3>
+      <div>2023-Present: Full Stack QA @ Eruvaka Technologies</div>
+      <div>2019-2023: QA Lead @ Akrivia Automations</div>
+      <div>2018-2019: Sr. QA Engineer @ Amzur InfoTech</div>
+      <div>2015-2018: QA Executive @ Cultuzz India</div>
+    </div>
   </section>
 
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skill-bar"><span>Java</span><div class="bar" style="width:90%"></div></div>
-    <div class="skill-bar"><span>Selenium/Appium</span><div class="bar" style="width:95%"></div></div>
-    <div class="skill-bar"><span>JMeter/Performance</span><div class="bar" style="width:85%"></div></div>
-    <div class="skill-bar"><span>CI/CD & Jenkins</span><div class="bar" style="width:80%"></div></div>
-    <div class="skill-bar"><span>Test Frameworks</span><div class="bar" style="width:92%"></div></div>
-  </section>
-
-  <section id="experience" class="container">
-    <h2>Experience</h2>
-    <article>
-      <h3>Full Stack QA Engineer @ Eruvaka (2023 – Present)</h3>
-      <ul>
-        <li>🚀 Automated mobile & web apps from scratch using Java, Appium & Selenium</li>
-        <li>📊 Boosted test coverage by 80% and reduced release cycle time by 40%</li>
-        <li>🔁 Integrated automation into Jenkins CI/CD pipelines</li>
-      </ul>
-    </article>
-    <article>
-      <h3>QA Lead @ Akrivia (2019 – 2023)</h3>
-      <ul>
-        <li>👥 Led a team of 28 QA engineers and implemented automation frameworks</li>
-        <li>📈 Improved team productivity by 30%</li>
-        <li>💡 Delivered large-scale HR software testing projects</li>
-      </ul>
-    </article>
-  </section>
-
-  <section id="projects" class="container">
+  <section id="projects" class="glass projects">
     <h2>Projects</h2>
-    <div class="card">PondLogs – Aqua Culture | Automation + API + Mobile + Performance</div>
-    <div class="card">Akrivia HCM – HRTech | Team Leadership + Full Stack QA</div>
-    <div class="card">VitalPoint6 – Health Claims | Performance & Cross-browser Testing</div>
+    <div class="card">
+      <h3>PondLogs</h3>
+      <p>Aquaculture app QA including automation, performance, and mobile testing.</p>
+      <small>Tech: Selenium, Appium, JMeter</small>
+    </div>
+    <div class="card">
+      <h3>Akrivia HCM</h3>
+      <p>HR software automation framework development and team lead activities.</p>
+      <small>Tech: Selenium, JMeter, API</small>
+    </div>
+    <div class="card">
+      <h3>XProc</h3>
+      <p>Insurance & BPM testing with functional, GUI, and automation coverage.</p>
+      <small>Tech: Selenium, Manual</small>
+    </div>
   </section>
 
-  <section id="achievements" class="container">
-    <h2>Achievements (Metric-Based)</h2>
+  <section class="glass blogs">
+    <h2>Blog</h2>
+    <div class="card">
+      <h4>Coming Soon</h4>
+      <p>Stay tuned for testing tips, career growth, and automation frameworks.</p>
+    </div>
+  </section>
+
+  <section class="glass resume">
+    <h2>Resume</h2>
+    <a href="VijayKundrapu_Resume_FullStackQA_10Y.pdf" class="cta-button" download>Download Resume</a>
     <ul>
-      <li>📌 80% ↑ test coverage via automation</li>
-      <li>⏱ 60% ↓ manual effort through reusable frameworks</li>
-      <li>📈 30% ↑ team productivity through mentoring</li>
+      <li>10+ Years in QA across domains and platforms</li>
+      <li>Built frameworks from scratch</li>
+      <li>Led teams and implemented Agile QA practices</li>
     </ul>
   </section>
 
-  <section id="contact" class="container">
+  <section class="glass contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:k.vijaykumar222@gmail.com">k.vijaykumar222@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/vijaykundrapu/" target="_blank">linkedin.com/in/vijaykundrapu</a></p>
+    <form>
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+    </form>
+    <div class="socials">
+      <p>Email: k.vijaykumar222@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/vijaykundrapu/">/vijaykundrapu</a></p>
+    </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Vijay Kumar Kundrapu</p>
-    </div>
+  <footer class="footer">
+    <p>&copy; 2025 Vijay Kundrapu</p>
+    <p>Made with ❤️ in Visakhapatnam</p>
   </footer>
 </body>
 </html>
